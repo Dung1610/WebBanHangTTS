@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { ManagerSalesman } from "./Content/ManagerSalesman";
-
+import { Login } from "./Content/Login";
+import { Register } from "./Content/Register";
+import { ChangePassword } from "./Content/ChangePassword";
 const App = () => {
   const [open, setOpen] = useState(true);
 
@@ -43,7 +45,7 @@ const App = () => {
         </ul>
       </div>
       <div className="h-screen flex-1 p-7">
-        <ManagerSalesman/>
+        <ChangePassword/>
       </div>
     </div>
   );
