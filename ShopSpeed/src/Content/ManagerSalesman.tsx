@@ -22,46 +22,48 @@ export const ManagerSalesman = () => {
         <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
                 <th scope="col" className="px-4  py-3">
-                    Product name
+                    Ảnh Đại Diện
                 </th>
                 <th scope="col" className="px-6 py-3">
-                    Product name
+                    Tên Shop
                 </th>
                 <th scope="col" className="px-6 py-3">
-                    Color
+                    Tên Chủ Shop
                 </th>
                 <th scope="col" className="px-6 py-3">
-                    Category
-                </th>
-                <th scope="col" className="px-6 py-3">
-                    Price
+                    Địa Chỉ
                 </th>
                 <th scope="col" className="px-6 py-3 text-center">
-                    <span className="">Edit</span>
+                    <span className="">Chỉnh Sửa</span>
+                </th>
+                <th scope="col" className="px-6 py-3 text-center">
+                    <span className="">Khoá / Mở</span>
                 </th>
             </tr>
         </thead>
         <tbody>
             <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                 <th scope="row" className="flex items-center w-50 h-50 px-6 py-4">
-                    <img className="w-10 h-10 rounded-full" src="/docs/images/people/profile-picture-5.jpg" alt=""/>
+                    <img className="w-10 h-10 rounded-full" src="./src/image/avatar.jpg" alt=""/>
                 </th>
                 <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                     Apple MacBook Pro 17"
                 </th>
                 <td className="px-6 py-4">
-                    Silver
+                    Rober
                 </td>
                 <td className="px-6 py-4">
-                    Laptop
-                </td>
-                <td className="px-6 py-4">
-                    $2999
+                    kha van can
                 </td>
                 <td className="px-6 py-4 text-center">
                     <pre>
-                    <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                    <a href="#" className="font-medium text-red-600 dark:text-red-500 hover:underline ms-3">Remove</a>
+                    <a href="#" className="px-6 py-2 min-w-[120px] text-center text-white bg-red-600 border border-red-600 rounded active:text-red-500 hover:bg-transparent hover:text-red-600 focus:outline-none focus:ring m-10">Edit</a>
+                    <a href="#" className="px-6 py-2 min-w-[120px] text-center text-white bg-blue-600 border border-blue-600 rounded active:text-blue-500 hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring">Remove</a>
+                    </pre>
+                </td>
+                <td className="px-6 py-4 text-center">
+                    <pre>
+                    <a href="#" className="inline-flex items-center justify-center rounded-xl bg-red-600 py-2 px-6 font-dm text-base font-medium text-white shadow-xl transition-transform duration-200 ease-in-out hover:scale-[1.02]">Edit</a>
                     </pre>
                 </td>
             </tr>
