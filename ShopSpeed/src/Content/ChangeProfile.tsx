@@ -16,9 +16,9 @@ export const ChangeProfile = () => {
                         className="w-full pt-6 rounded-sm bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw5fHxjb3ZlcnxlbnwwfDB8fHwxNzEwNzQxNzY0fDA&ixlib=rb-4.0.3&q=80&w=1080')] bg-cover bg-center bg-no-repeat items-center">
                         <div
                             className="mx-auto flex justify-center w-[141px] h-[141px] bg-blue-300/20 rounded-full bg-[url('./src/image/avatar.jpg')] bg-cover bg-center bg-no-repeat">
-                            <div className="bg-white/90 rounded-full w-6 h-6 text-center ml-28 mt-4">
-                                <label >
-                                        <svg data-slot="icon" className="w-6 h-5 text-blue-700" fill="none"
+                            <div className="bg-white/90 rounded-full w-10 h-10 text-center ml-20 mt-28">
+                                <label>
+                                        <svg data-slot="icon" className="w-10 h-7 mt-1 text-blue-700" fill="none"
                                             stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24"
                                             xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                             <path stroke-linecap="round" stroke-linejoin="round"
