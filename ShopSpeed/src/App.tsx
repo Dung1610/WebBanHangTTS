@@ -4,6 +4,8 @@ import { Login } from "./Content/Login";
 import { Register } from "./Content/Register";
 import { ChangePassword } from "./Content/ChangePassword";
 import { OOOOO } from "./Content/OOOOO";
+import { TestGiaoDien } from "./Content/TestGiaoDien";
+TestGiaoDien
 const App = () => {
   const [open, setOpen] = useState(true);
 
