@@ -11,7 +11,7 @@ export const ListUser = () => {
               <div className="flex">
                 <input
                   type="text"
-                  placeholder="Search for the tool you like"
+                  placeholder="Search"
                   className="w-full md:w-80 px-3 h-10 rounded-l border-2 border-green-500 focus:outline-none focus:border-green-500"
                 />
                 <button
@@ -31,7 +31,6 @@ export const ListUser = () => {
                 </option>
                 <option value="Name">Name</option>
                 <option value="Email">Email</option>
-                <option value="Actions">Actions</option>
               </select>
             </form>
           </div>
@@ -193,6 +192,7 @@ export const ListUser = () => {
                     </div>
                   </td>
                 </tr>
+                
               </tbody>
             </table>
           </div>

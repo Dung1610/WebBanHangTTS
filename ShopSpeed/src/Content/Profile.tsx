@@ -12,7 +12,7 @@ export const Profile = () => {
 
         <div className="sm:w-[80%] xs:w-[90%] mx-auto flex">
           <img
-            src="./src/image/avatar.jpg"
+            src="../src/image/avatar.jpg"
             alt="User Profile"
             className="rounded-md lg:w-[12rem] lg:h-[12rem] md:w-[10rem] md:h-[10rem] sm:w-[8rem] sm:h-[8rem] xs:w-[7rem] xs:h-[7rem] outline outline-2 outline-offset-2 outline-blue-500 relative lg:bottom-[5rem] sm:bottom-[4rem] xs:bottom-[3rem]"
           />
@@ -46,7 +46,7 @@ export const Profile = () => {
                     <dt className="mb-1 text-gray-500 md:text-lg dark:text-gray-400">
                       Phone Number
                     </dt>
-                    <dd className="text-lg font-semibold">+251913****30</dd>
+                    <dd className="text-lg font-semibold">0123456789</dd>
                   </div>
                   <div className="flex flex-col pt-3">
                     <dt className="mb-1 text-gray-500 md:text-lg dark:text-gray-400">
