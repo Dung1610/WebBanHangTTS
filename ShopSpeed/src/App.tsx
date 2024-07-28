@@ -14,6 +14,9 @@ import Admin from "./Admin.tsx";
 import { Main } from "./Content/Main.tsx";
 import { NotFound } from "./Content/NotFound.tsx";
 import { Category } from "./Content/Category.tsx";
+import { ChangePassword } from "./Content/ChangePassword.tsx";
+import { ListSalesman } from "./Content/ListSalesman.tsx";
+import { ListAdmin } from "./Content/ListAdmin.tsx";
 
 export const App = () => {
   const getToken = sessionStorage.getItem("Token")
@@ -26,9 +29,12 @@ export const App = () => {
             <Route index element={<Main />} />
             <Route path="category" element={<Category />} >
             </Route>
-            <Route path="user" element={<ListUser />} />
+            <Route path="listuser" element={<ListUser />} />
+            <Route path="listsalesman" element={<ListSalesman />} />
+            <Route path="listadmin" element={<ListAdmin />} />
             <Route path="profile" element={<Profile />} />
             <Route path="edit" element={<ChangeProfile />} />
+            <Route path="changepassword" element={<ChangePassword />} />
           </Route>
            : 
             <Route path="/" element={<Login />} />

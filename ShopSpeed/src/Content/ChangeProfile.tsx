@@ -52,18 +52,6 @@ export const ChangeProfile = () => {
                                     className="w-full border-2 rounded-lg dark:text-gray-200 dark:border-gray-600 dark:bg-gray-800"
                                     placeholder="Email"/>
                         </div>
-                        <div className="w-full  mb-4 mt-4">
-                            <label className=" dark:text-gray-300">Password</label>
-                            <input type="password"
-                                    className="w-full border-2 rounded-lg dark:text-gray-200 dark:border-gray-600 dark:bg-gray-800"
-                                    placeholder="Password"/>
-                        </div>
-                        <div className="w-full  mb-4 mt-4">
-                            <label className=" dark:text-gray-300">Confirm Password</label>
-                            <input type="password"
-                                    className="w-full border-2 rounded-lg dark:text-gray-200 dark:border-gray-600 dark:bg-gray-800"
-                                    placeholder="Confirm Password"/>
-                        </div>
                     <div className="w-full rounded-lg bg-blue-500 mt-4 text-white text-lg font-semibold">
                         <button type="submit" className="w-full p-4">Submit</button>
                     </div>

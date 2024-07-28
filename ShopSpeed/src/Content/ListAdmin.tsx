@@ -3,7 +3,7 @@ import { danhSachNguoiDung, updateStatus } from "../Services/adminService";
 import LoadingLayout from "./LoadingLayout";
 
 // type list
-type ListUser = {
+type ListAdmin = {
   createdAt: "";
   name: "";
   email: "";
@@ -12,15 +12,15 @@ type ListUser = {
   status: 0;
   address: "";
 };
-export const ListUser = () => {
-  const [list, setlist] = useState<ListUser[]>();
+export const ListAdmin = () => {
+  const [list, setlist] = useState<ListAdmin[]>();
   useEffect(() => {
     listUser();
     update;
   }, []);
 
   const listUser = async () => {
-    setlist(await danhSachNguoiDung("nguoi-mua"));
+    setlist(await danhSachNguoiDung("quan-tri-vien"));
   };
   const [search, setSearch] = useState("");
   const [selected, setSelected] = useState("Name");

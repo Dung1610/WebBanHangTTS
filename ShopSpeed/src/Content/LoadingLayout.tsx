@@ -9,7 +9,7 @@ const LoadingLayout = ({ loading, children }: LoadingTyper) => {
   return (
     <>
       {loading && (
-        <div className="flex items-center justify-center min-h-screen">
+        <div className="flex items-center justify-center bg-white">
           <div
             style={{ borderTopColor: "transparent" }}
             className="w-8 h-8 border-4 border-blue-200 rounded-full animate-spin"

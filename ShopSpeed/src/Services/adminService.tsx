@@ -26,7 +26,7 @@ const loginAdmin = (username:string, password:string) => {
 };
 
 const danhSachNguoiDung = (code:string) =>{
-  return myAxios.get(`users/role?code=nguoi-mua`,{headers:
+  return myAxios.get(`users/role?code=${code}`,{headers:
     {
       "Authorization": `Bearer ${sessionStorage.getItem("Token")}`
     }

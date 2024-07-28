@@ -15,7 +15,8 @@ export const Login = () => {
     const res = await loginAdmin(admin.username,admin.password)
     if (admin.username != "" && admin.password != ""){
       if (res != null){
-        sessionStorage.setItem("Token",res)
+        location.reload()
+        redirect("/")
       }else{
         
       }
