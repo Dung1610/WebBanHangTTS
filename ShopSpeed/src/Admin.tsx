@@ -1,25 +1,18 @@
 import { useState } from "react";
 import "flowbite";
-import { ManagerSalesman } from "./Content/ManagerSalesman";
-import { Login } from "./Content/Login";
-import { Register } from "./Content/Register";
-import { ChangePassword } from "./Content/ChangePassword";
-import { OOOOO } from "./Content/OOOOO";
-import { ListUser } from "./Content/ListUser";
-import { Profile } from "./Content/Profile";
-import { ChangeProfile } from "./Content/ChangeProfile";
-import { TestPopup } from "./Content/TestPopup";
 import { Link, Outlet, useNavigate } from "react-router-dom";
-import { Button } from "flowbite-react";
+import { Login } from "./Content/Login";
+import { TestTable } from "./Content/TestTable";
 
 const Admin = () => {
   const [open, setOpen] = useState(true);
-  const navigation = useNavigate()
 
-  const LogOut = () =>{
-      localStorage.removeItem('Token')
-      navigation('/')
-  }
+  const navigation = useNavigate();
+
+  const LogOut = () => {
+    sessionStorage.removeItem("Token");
+    navigation("/");
+  };
 
   return (
     <div className="flex ">
@@ -50,60 +43,123 @@ const Admin = () => {
           </h1>
         </div>
         <ul className="pt-6">
-          <li className="flex py-5 rounded-md p-2 cursor-pointer hover:bg-light-white text-gray-300 text-sm items-center gap-x-4">
+          <li
+            data-collapse-toggle="dropdown-sileBar-category"
+            className="flex py-5 rounded-md p-2 cursor-pointer hover:bg-light-white text-gray-300 text-sm items-center gap-x-4"
+          >
             <svg
-              className="w-6 h-6 text-white-800 dark:text-white"
+                className="w-6 h-6 text-white-800 dark:text-white"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeWidth="2"
+                  d="M20 6H10m0 0a2 2 0 1 0-4 0m4 0a2 2 0 1 1-4 0m0 0H4m16 6h-2m0 0a2 2 0 1 0-4 0m4 0a2 2 0 1 1-4 0m0 0H4m16 6H10m0 0a2 2 0 1 0-4 0m4 0a2 2 0 1 1-4 0m0 0H4"
+                />
+              </svg>
+            <span className={`${!open && "hidden"} origin-left items-center inline-flex`}>
+              <span>List</span>
+              <svg
+              className="w-2.5 h-2.5 ms-3"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
               fill="none"
-              viewBox="0 0 24 24"
+              viewBox="0 0 10 6"
             >
               <path
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-width="2"
-                d="M20 6H10m0 0a2 2 0 1 0-4 0m4 0a2 2 0 1 1-4 0m0 0H4m16 6h-2m0 0a2 2 0 1 0-4 0m4 0a2 2 0 1 1-4 0m0 0H4m16 6H10m0 0a2 2 0 1 0-4 0m4 0a2 2 0 1 1-4 0m0 0H4"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="m1 1 4 4 4-4"
               />
             </svg>
-            <button className={`${!open && "hidden"} origin-left duration-200`}>
-              website information
-            </button>
+            </span>
           </li>
-        
-          <li className="flex rounded-md cursor-pointer hover:bg-light-white text-gray-300 text-sm items-center gap-x-4">
+          {/* menu list */}
+          <ul id="dropdown-sileBar-category" className={`${!open && "hidden"} hidden py-2 space-y-2`}>
+            <Link to={'user'} className="flex py-5 pl-6 rounded-md p-2 cursor-pointer hover:bg-light-white text-gray-300 text-sm items-center gap-x-4">
+              <svg
+                className="w-6 h-6 text-white-800 dark:text-white"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeWidth="2"
+                  d="M20 6H10m0 0a2 2 0 1 0-4 0m4 0a2 2 0 1 1-4 0m0 0H4m16 6h-2m0 0a2 2 0 1 0-4 0m4 0a2 2 0 1 1-4 0m0 0H4m16 6H10m0 0a2 2 0 1 0-4 0m4 0a2 2 0 1 1-4 0m0 0H4"
+                />
+              </svg>
+                User
+            </Link>
+            <li className="flex py-5 pl-6 rounded-md p-2 cursor-pointer hover:bg-light-white text-gray-300 text-sm items-center gap-x-4">
+              <svg
+                className="w-6 h-6 text-white-800 dark:text-white"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeWidth="2"
+                  d="M20 6H10m0 0a2 2 0 1 0-4 0m4 0a2 2 0 1 1-4 0m0 0H4m16 6h-2m0 0a2 2 0 1 0-4 0m4 0a2 2 0 1 1-4 0m0 0H4m16 6H10m0 0a2 2 0 1 0-4 0m4 0a2 2 0 1 1-4 0m0 0H4"
+                />
+              </svg>
+                Sale
+            </li>
+            <li className="flex py-5 pl-6 rounded-md p-2 cursor-pointer hover:bg-light-white text-gray-300 text-sm items-center gap-x-4">
+              <svg
+                className="w-6 h-6 text-white-800 dark:text-white"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeWidth="2"
+                  d="M20 6H10m0 0a2 2 0 1 0-4 0m4 0a2 2 0 1 1-4 0m0 0H4m16 6h-2m0 0a2 2 0 1 0-4 0m4 0a2 2 0 1 1-4 0m0 0H4m16 6H10m0 0a2 2 0 1 0-4 0m4 0a2 2 0 1 1-4 0m0 0H4"
+                />
+              </svg>
+                Admin
+            </li>
+          </ul>
+
+          <li
+            data-dropdown-toggle="dropdownAvatarName"
+            className="flex rounded-md cursor-pointer hover:bg-light-white text-gray-300 text-sm items-center gap-x-4"
+          >
             <img
               className="w-10 h-10 rounded-full"
               src="../src/image/avatar.jpg"
             />
             <button
-              id="dropdownAvatarNameButton"
-              data-dropdown-toggle="dropdownAvatarName"
               className={`${
                 !open && "hidden"
               } flex py-5 rounded-md cursor-pointer text-gray-300 text-sm items-center gap-x-4`}
               type="button"
             >
-              Bonnie Green
-              <svg
-                className="w-2.5 h-2.5 ms-3"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 10 6"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="m1 1 4 4 4-4"
-                />
-              </svg>
+              {sessionStorage.getItem("name")}
             </button>
           </li>
-
           <div
             id="dropdownAvatarName"
             className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600"
@@ -120,25 +176,29 @@ const Admin = () => {
               >
                 <path
                   stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeWidth="2"
                   d="m3.5 5.5 7.893 6.036a1 1 0 0 0 1.214 0L20.5 5.5M4 19h16a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z"
                 />
               </svg>
-              <div className="truncate">name@flowbite.com</div>
+              <div className="truncate">{sessionStorage.getItem("email")}</div>
             </div>
             <ul
               className="py-2 text-sm text-gray-700 dark:text-gray-200"
               aria-labelledby="dropdownInformdropdownAvatarNameButtonationButton"
             >
-              <li>
-                <Link
-                  to={"profile"}
-                  className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                >
-                  Profile
-                </Link>
-              </li>
+              <Link
+                to={"profile"}
+                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+              >
+                Profile
+              </Link>
+              <Link
+                to={"edit"}
+                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+              >
+                Change Profile
+              </Link>
             </ul>
             <div className="py-2">
               <a

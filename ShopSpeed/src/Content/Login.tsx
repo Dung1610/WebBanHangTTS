@@ -1,25 +1,34 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { redirect, useNavigate } from 'react-router-dom'
+import { danhSachNguoiDung, loginAdmin } from '../Services/adminService'
+import LoadingLayout from './LoadingLayout'
 
 export const Login = () => {
   const [admin, setadmin] = useState({
-    username:'123',
+    username:'',
     password:''
   })
-
+  const [load,setload] = useState<boolean>(false)
   const navigation = useNavigate()
-
-  const checkLogin = () =>{
+  const checkLogin = async () =>{
+    setload(true)
+    const res = await loginAdmin(admin.username,admin.password)
     if (admin.username != "" && admin.password != ""){
-      localStorage.setItem('Token', "token")
-      navigation('/admin')
+      if (res != null){
+        sessionStorage.setItem("Token",res)
+      }else{
+        
+      }
     }else{
       
     }
+    setload(false)
+    navigation("/")
   }
   
 
   return (
+    <LoadingLayout loading={load}>
 <div className="bg-green-300 dark:bg-gray-800 h-screen overflow-hidden flex items-center justify-center">
   <div className="bg-white lg:w-6/12 md:7/12 w-8/12 shadow-3xl rounded-xl">
     <div className="bg-gray-800 shadow shadow-gray-200 absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full p-4 md:p-8">
@@ -44,5 +53,6 @@ export const Login = () => {
     </div>
   </div>
  </div>
+ </LoadingLayout>
   )
 }
